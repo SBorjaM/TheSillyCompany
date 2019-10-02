@@ -1,0 +1,281 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: segoe ui;
+}
+body{
+	font-family: verdana;
+	font-size: 16px;
+	background: #f2f2f2;
+	color: white;
+}
+header{
+	background: #000;
+	width: 100%;
+	top: 0;
+	position: fixed;
+	z-index: 999;
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+}
+.menu{
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu .logo{
+	display: inline-block;
+	margin-right: 1em;
+}
+.menu .logo img{
+	vertical-align: top;
+	height: 50px;
+	width: auto;
+}
+.menu .btn-menu{
+	display: none;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1em;
+}
+.menu .enlaces li{
+	display: inline-block;
+	text-align: right;
+}
+.menu .enlaces li a{
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	padding: 1em;
+	text-align: center;
+	font-size: 1em;
+}
+.menu .enlaces i{
+	margin-right: 5px;
+}
+.menu .enlaces li ul li{
+	display: block;
+	text-align: center;
+}
+.menu .enlaces li.current a, .enlaces li a:hover{
+	text-decoration: underline;
+}
+.menu li ul{
+	display:none;
+	position:absolute;
+	min-width:140px;
+}		
+.menu li:hover > ul{
+	display:block;
+	z-index: 999;
+	background: #000;
+}
+main{
+	width: 90%;
+	margin: 80px auto;
+}
+.article{
+	width: 78%;
+	margin: 15px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.75); 
+	background: white;
+	color: black;
+	padding: 1em;
+}
+main .article .text{
+	display: inline-block;
+	text-align: center;
+}
+
+main h1{
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 30px;
+	padding-top: 30px;
+}
+
+.img, .img2{
+	display: inline-block;
+	text-align: right;
+	width: 50%;
+	border-style: double;
+}
+
+.img3{
+	width: 0;
+}
+
+/*INFO PARALLEL*/
+.info-parallel h2{
+	font-size: 30px;
+	padding-bottom: 40px;
+}
+
+.info-parallel .fas{
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+
+/*IN THE BOX*/
+#itb {
+	padding-left: 25%;
+}
+
+#itb h1{
+	text-align: right;
+	font-size: 30px;
+}
+
+#itb li{
+	list-style: none;
+	text-align: left;
+	font-size: 20px;
+	line-height: 2em;
+}
+
+footer{
+	width: 100%;
+	padding: 1em;
+	background: black;
+	bottom: 0;
+}
+.footer{
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+footer .info{
+	display: inline-block;
+	margin-right: 1em;
+	color: white;
+}
+footer .footer .enlacesRs{
+	display: inline-block;
+	text-align: right; 
+}
+.footer .enlacesRs a{
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+}
+.footer .enlacesRs i{
+	margin-right: 5px;
+}
+
+@media screen and (max-width: 700px) {
+	header .menu{
+		flex-direction: column;
+	}
+	header .menu .logo{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		padding: 1em;
+	}
+	.menu .logo img{
+		height: 30px;
+		width: 100px;
+	}
+	header .menu .logo .btn-menu{
+		display: inline-block;
+	}
+	header .menu .enlaces {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		font-size: 12px;
+	}
+	main{
+		margin: 30% auto;
+		margin-bottom: 10%;
+		padding-bottom: 15px;
+	}
+	main .article{
+		flex-direction: column;
+	}
+	main .article .text{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		padding: 1em;
+	}
+	main .article .img{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	
+	/*INFO VERTICAL*/
+	main h1{
+		margin-bottom: 20px;
+		padding-top: 0px;
+		font-size: 25px;
+	}
+
+	main .text p{
+		margin-bottom: 20px;
+	}
+
+	/*INFO VERTICAL 2*/
+	.img2{
+		width: 0;
+		border-style: none;
+	}
+
+	.img3{
+		width: 100%;
+		border-style: double;	
+	}
+
+	/*INFO PARARLLEL*/
+	.info-parallel{
+		width: 90%;
+	}
+
+	.info-parallel h2{
+		font-size: 25px;
+	}
+
+	.info-parallel p{
+		margin-bottom: 20px;
+	}
+
+	/*IN THE BOX*/
+	#itb{
+		padding: 0;
+	}
+
+	#itb h1{
+		text-align: center;
+	}
+
+	#itb li{
+		text-align: center;
+	}
+
+	footer{
+		bottom: 0;
+		position: fixed;
+		font-size: 12px;
+	}
+
+}
